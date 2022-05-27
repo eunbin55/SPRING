@@ -14,7 +14,7 @@ public class UserDaoTest {
 	UserVO	userVO;
 	
 	public UserDaoTest() {
-		dao = new NUserDao();
+		dao = new UserDao();
 		userVO = new UserVO("p22", "이은빈22", "4321");
 	}
 	
