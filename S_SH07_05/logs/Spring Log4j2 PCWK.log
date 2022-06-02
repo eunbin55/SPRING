@@ -1,0 +1,92 @@
+[2022-06-02 12:17:16.232] INFO  AbstractTestContextBootstrapper.getDefaultTestExecutionListenerClassNames(AbstractTestContextBootstrapper.java:245) - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+[2022-06-02 12:17:16.244] INFO  AbstractTestContextBootstrapper.getTestExecutionListeners(AbstractTestContextBootstrapper.java:174) - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@1a677343, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@15de0b3c, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@489115ef, org.springframework.test.context.support.DirtiesContextTestExecutionListener@3857f613, org.springframework.test.context.transaction.TransactionalTestExecutionListener@198b6731, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@7c6908d7, org.springframework.test.context.event.EventPublishingTestExecutionListener@3c9754d8]
+[2022-06-02 12:17:16.436] DEBUG SonySpeaker.<init>(SonySpeaker.java:12) - SonySpeaker 생성자 호출
+[2022-06-02 12:17:16.455] DEBUG SamsungTV.<init>(SamsungTV.java:29) - 삼성 TV인자 2개 생성자 호출!
+[2022-06-02 12:17:16.455] DEBUG SamsungTV.<init>(SamsungTV.java:30) - price:20000000
+[2022-06-02 12:17:16.456] DEBUG SamsungTV.initMethod(SamsungTV.java:35) - 삼성 TV initMethod()
+[2022-06-02 12:17:16.490] DEBUG JTvPcwk.setUp(JTvPcwk.java:28) - -----------------------
+[2022-06-02 12:17:16.490] DEBUG JTvPcwk.setUp(JTvPcwk.java:29) - -0 setUp()-
+[2022-06-02 12:17:16.490] DEBUG JTvPcwk.setUp(JTvPcwk.java:30) - -----------------------
+[2022-06-02 12:17:16.493] DEBUG JTvPcwk.setUp(JTvPcwk.java:34) - -context-org.springframework.context.support.GenericApplicationContext@ed7f8b4, started on Thu Jun 02 12:17:16 KST 2022
+[2022-06-02 12:17:16.493] DEBUG JTvPcwk.setUp(JTvPcwk.java:35) - -tv01-com.pcwk.ehr.SamsungTV@147e2ae7
+[2022-06-02 12:17:16.493] DEBUG JTvPcwk.setUp(JTvPcwk.java:36) - -tv02-com.pcwk.ehr.SamsungTV@147e2ae7
+[2022-06-02 12:17:16.494] DEBUG JTvPcwk.tvTest(JTvPcwk.java:51) - =======================
+[2022-06-02 12:17:16.494] DEBUG JTvPcwk.tvTest(JTvPcwk.java:52) - =tvTest()=
+[2022-06-02 12:17:16.494] DEBUG JTvPcwk.tvTest(JTvPcwk.java:53) - =======================
+[2022-06-02 12:17:16.494] DEBUG SamsungTV.powerOn(SamsungTV.java:47) - 삼성 TV 전원을 켠다.
+[2022-06-02 12:17:16.494] DEBUG SonySpeaker.volumeUp(SonySpeaker.java:16) - SonySpeaker volumeUp 호출
+[2022-06-02 12:17:16.495] DEBUG SonySpeaker.volumeDown(SonySpeaker.java:20) - SonySpeaker volumeDown 호출
+[2022-06-02 12:17:16.495] DEBUG SamsungTV.powerOff(SamsungTV.java:51) - 삼성 TV 전원을 끈다.
+[2022-06-02 12:17:16.496] DEBUG JTvPcwk.tearDown(JTvPcwk.java:44) - -----------------------
+[2022-06-02 12:17:16.496] DEBUG JTvPcwk.tearDown(JTvPcwk.java:45) - -9 tearDown()-
+[2022-06-02 12:17:16.496] DEBUG JTvPcwk.tearDown(JTvPcwk.java:46) - -----------------------
+[2022-06-02 12:17:16.500] DEBUG SamsungTV.destroyMethod(SamsungTV.java:41) - 삼성 TV destroyMethod()
+[2022-06-02 12:26:35.451] INFO  AbstractTestContextBootstrapper.getDefaultTestExecutionListenerClassNames(AbstractTestContextBootstrapper.java:245) - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+[2022-06-02 12:26:35.462] INFO  AbstractTestContextBootstrapper.getTestExecutionListeners(AbstractTestContextBootstrapper.java:174) - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@1a677343, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@15de0b3c, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@489115ef, org.springframework.test.context.support.DirtiesContextTestExecutionListener@3857f613, org.springframework.test.context.transaction.TransactionalTestExecutionListener@198b6731, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@7c6908d7, org.springframework.test.context.event.EventPublishingTestExecutionListener@3c9754d8]
+[2022-06-02 12:26:35.659] DEBUG SonySpeaker.<init>(SonySpeaker.java:12) - SonySpeaker 생성자 호출
+[2022-06-02 12:26:35.680] DEBUG SamsungTV.<init>(SamsungTV.java:28) - 삼성 TV인자 2개 생성자 호출!
+[2022-06-02 12:26:35.681] DEBUG SamsungTV.<init>(SamsungTV.java:29) - price:20000000
+[2022-06-02 12:26:35.681] DEBUG SamsungTV.initMethod(SamsungTV.java:34) - 삼성 TV initMethod()
+[2022-06-02 12:26:35.715] DEBUG JTvPcwk.setUp(JTvPcwk.java:28) - -----------------------
+[2022-06-02 12:26:35.715] DEBUG JTvPcwk.setUp(JTvPcwk.java:29) - -0 setUp()-
+[2022-06-02 12:26:35.715] DEBUG JTvPcwk.setUp(JTvPcwk.java:30) - -----------------------
+[2022-06-02 12:26:35.718] DEBUG JTvPcwk.setUp(JTvPcwk.java:34) - -context-org.springframework.context.support.GenericApplicationContext@ed7f8b4, started on Thu Jun 02 12:26:35 KST 2022
+[2022-06-02 12:26:35.719] DEBUG JTvPcwk.setUp(JTvPcwk.java:35) - -tv01-com.pcwk.ehr.SamsungTV@15d49048
+[2022-06-02 12:26:35.719] DEBUG JTvPcwk.setUp(JTvPcwk.java:36) - -tv02-com.pcwk.ehr.SamsungTV@15d49048
+[2022-06-02 12:26:35.720] DEBUG JTvPcwk.tvTest(JTvPcwk.java:51) - =======================
+[2022-06-02 12:26:35.720] DEBUG JTvPcwk.tvTest(JTvPcwk.java:52) - =tvTest()=
+[2022-06-02 12:26:35.721] DEBUG JTvPcwk.tvTest(JTvPcwk.java:53) - =======================
+[2022-06-02 12:26:35.721] DEBUG SamsungTV.powerOn(SamsungTV.java:46) - 삼성 TV 전원을 켠다.
+[2022-06-02 12:26:35.721] DEBUG AppleSpeaker.volumeUp(AppleSpeaker.java:15) - Apple SpeakervolumeUp() 호출
+[2022-06-02 12:26:35.721] DEBUG AppleSpeaker.volumeDown(AppleSpeaker.java:21) - Apple SpeakervolumeDown() 호출
+[2022-06-02 12:26:35.721] DEBUG SamsungTV.powerOff(SamsungTV.java:50) - 삼성 TV 전원을 끈다.
+[2022-06-02 12:26:35.724] DEBUG JTvPcwk.tearDown(JTvPcwk.java:44) - -----------------------
+[2022-06-02 12:26:35.724] DEBUG JTvPcwk.tearDown(JTvPcwk.java:45) - -9 tearDown()-
+[2022-06-02 12:26:35.725] DEBUG JTvPcwk.tearDown(JTvPcwk.java:46) - -----------------------
+[2022-06-02 12:26:35.729] DEBUG SamsungTV.destroyMethod(SamsungTV.java:40) - 삼성 TV destroyMethod()
+[2022-06-02 12:27:11.073] INFO  AbstractTestContextBootstrapper.getDefaultTestExecutionListenerClassNames(AbstractTestContextBootstrapper.java:245) - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+[2022-06-02 12:27:11.085] INFO  AbstractTestContextBootstrapper.getTestExecutionListeners(AbstractTestContextBootstrapper.java:174) - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@1a677343, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@15de0b3c, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@489115ef, org.springframework.test.context.support.DirtiesContextTestExecutionListener@3857f613, org.springframework.test.context.transaction.TransactionalTestExecutionListener@198b6731, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@7c6908d7, org.springframework.test.context.event.EventPublishingTestExecutionListener@3c9754d8]
+[2022-06-02 12:27:11.288] DEBUG SonySpeaker.<init>(SonySpeaker.java:12) - SonySpeaker 생성자 호출
+[2022-06-02 12:27:11.310] DEBUG SamsungTV.<init>(SamsungTV.java:28) - 삼성 TV인자 2개 생성자 호출!
+[2022-06-02 12:27:11.310] DEBUG SamsungTV.<init>(SamsungTV.java:29) - price:20000000
+[2022-06-02 12:27:11.311] DEBUG SamsungTV.initMethod(SamsungTV.java:34) - 삼성 TV initMethod()
+[2022-06-02 12:27:11.344] DEBUG JTvPcwk.setUp(JTvPcwk.java:28) - -----------------------
+[2022-06-02 12:27:11.344] DEBUG JTvPcwk.setUp(JTvPcwk.java:29) - -0 setUp()-
+[2022-06-02 12:27:11.344] DEBUG JTvPcwk.setUp(JTvPcwk.java:30) - -----------------------
+[2022-06-02 12:27:11.347] DEBUG JTvPcwk.setUp(JTvPcwk.java:34) - -context-org.springframework.context.support.GenericApplicationContext@ed7f8b4, started on Thu Jun 02 12:27:11 KST 2022
+[2022-06-02 12:27:11.347] DEBUG JTvPcwk.setUp(JTvPcwk.java:35) - -tv01-com.pcwk.ehr.SamsungTV@15d49048
+[2022-06-02 12:27:11.347] DEBUG JTvPcwk.setUp(JTvPcwk.java:36) - -tv02-com.pcwk.ehr.SamsungTV@15d49048
+[2022-06-02 12:27:11.348] DEBUG JTvPcwk.tvTest(JTvPcwk.java:51) - =======================
+[2022-06-02 12:27:11.348] DEBUG JTvPcwk.tvTest(JTvPcwk.java:52) - =tvTest()=
+[2022-06-02 12:27:11.348] DEBUG JTvPcwk.tvTest(JTvPcwk.java:53) - =======================
+[2022-06-02 12:27:11.348] DEBUG SamsungTV.powerOn(SamsungTV.java:46) - 삼성 TV 전원을 켠다.
+[2022-06-02 12:27:11.348] DEBUG AppleSpeaker.volumeUp(AppleSpeaker.java:15) - Apple SpeakervolumeUp() 호출
+[2022-06-02 12:27:11.348] DEBUG AppleSpeaker.volumeDown(AppleSpeaker.java:21) - Apple SpeakervolumeDown() 호출
+[2022-06-02 12:27:11.348] DEBUG SamsungTV.powerOff(SamsungTV.java:50) - 삼성 TV 전원을 끈다.
+[2022-06-02 12:27:11.349] DEBUG JTvPcwk.tearDown(JTvPcwk.java:44) - -----------------------
+[2022-06-02 12:27:11.350] DEBUG JTvPcwk.tearDown(JTvPcwk.java:45) - -9 tearDown()-
+[2022-06-02 12:27:11.350] DEBUG JTvPcwk.tearDown(JTvPcwk.java:46) - -----------------------
+[2022-06-02 12:27:11.354] DEBUG SamsungTV.destroyMethod(SamsungTV.java:40) - 삼성 TV destroyMethod()
+[2022-06-02 12:27:44.182] INFO  AbstractTestContextBootstrapper.getDefaultTestExecutionListenerClassNames(AbstractTestContextBootstrapper.java:245) - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+[2022-06-02 12:27:44.194] INFO  AbstractTestContextBootstrapper.getTestExecutionListeners(AbstractTestContextBootstrapper.java:174) - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@1a677343, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@15de0b3c, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@489115ef, org.springframework.test.context.support.DirtiesContextTestExecutionListener@3857f613, org.springframework.test.context.transaction.TransactionalTestExecutionListener@198b6731, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@7c6908d7, org.springframework.test.context.event.EventPublishingTestExecutionListener@3c9754d8]
+[2022-06-02 12:27:44.387] DEBUG SonySpeaker.<init>(SonySpeaker.java:12) - SonySpeaker 생성자 호출
+[2022-06-02 12:27:44.408] DEBUG SamsungTV.<init>(SamsungTV.java:28) - 삼성 TV인자 2개 생성자 호출!
+[2022-06-02 12:27:44.408] DEBUG SamsungTV.<init>(SamsungTV.java:29) - price:20000000
+[2022-06-02 12:27:44.409] DEBUG SamsungTV.initMethod(SamsungTV.java:34) - 삼성 TV initMethod()
+[2022-06-02 12:27:44.448] DEBUG JTvPcwk.setUp(JTvPcwk.java:28) - -----------------------
+[2022-06-02 12:27:44.449] DEBUG JTvPcwk.setUp(JTvPcwk.java:29) - -0 setUp()-
+[2022-06-02 12:27:44.449] DEBUG JTvPcwk.setUp(JTvPcwk.java:30) - -----------------------
+[2022-06-02 12:27:44.451] DEBUG JTvPcwk.setUp(JTvPcwk.java:34) - -context-org.springframework.context.support.GenericApplicationContext@ed7f8b4, started on Thu Jun 02 12:27:44 KST 2022
+[2022-06-02 12:27:44.451] DEBUG JTvPcwk.setUp(JTvPcwk.java:35) - -tv01-com.pcwk.ehr.SamsungTV@15d49048
+[2022-06-02 12:27:44.451] DEBUG JTvPcwk.setUp(JTvPcwk.java:36) - -tv02-com.pcwk.ehr.SamsungTV@15d49048
+[2022-06-02 12:27:44.452] DEBUG JTvPcwk.tvTest(JTvPcwk.java:51) - =======================
+[2022-06-02 12:27:44.452] DEBUG JTvPcwk.tvTest(JTvPcwk.java:52) - =tvTest()=
+[2022-06-02 12:27:44.452] DEBUG JTvPcwk.tvTest(JTvPcwk.java:53) - =======================
+[2022-06-02 12:27:44.453] DEBUG SamsungTV.powerOn(SamsungTV.java:46) - 삼성 TV 전원을 켠다.
+[2022-06-02 12:27:44.453] DEBUG SonySpeaker.volumeUp(SonySpeaker.java:17) - SonySpeaker volumeUp 호출
+[2022-06-02 12:27:44.453] DEBUG SonySpeaker.volumeDown(SonySpeaker.java:22) - SonySpeaker volumeDown 호출
+[2022-06-02 12:27:44.453] DEBUG SamsungTV.powerOff(SamsungTV.java:50) - 삼성 TV 전원을 끈다.
+[2022-06-02 12:27:44.454] DEBUG JTvPcwk.tearDown(JTvPcwk.java:44) - -----------------------
+[2022-06-02 12:27:44.454] DEBUG JTvPcwk.tearDown(JTvPcwk.java:45) - -9 tearDown()-
+[2022-06-02 12:27:44.455] DEBUG JTvPcwk.tearDown(JTvPcwk.java:46) - -----------------------
+[2022-06-02 12:27:44.459] DEBUG SamsungTV.destroyMethod(SamsungTV.java:40) - 삼성 TV destroyMethod()
