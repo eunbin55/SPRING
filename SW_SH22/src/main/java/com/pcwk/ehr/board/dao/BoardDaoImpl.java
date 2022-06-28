@@ -1,6 +1,7 @@
 package com.pcwk.ehr.board.dao;
 
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 
 import org.apache.logging.log4j.LogManager;
@@ -11,6 +12,7 @@ import org.springframework.stereotype.Repository;
 
 import com.pcwk.ehr.board.domain.BoardVO;
 import com.pcwk.ehr.cmn.DTO;
+import com.pcwk.ehr.cmn.SearchVO;
 import com.pcwk.ehr.user.domain.UserVO;
 import com.sun.mail.imap.protocol.Namespaces.Namespace;
 
@@ -30,8 +32,21 @@ public class BoardDaoImpl implements BoardDao {
 	
 	@Override
 	public List<BoardVO> doRetrieve(DTO dto) throws SQLException {
-		// TODO Auto-generated method stub
-		return null;
+		List<BoardVO> list = new ArrayList<BoardVO>();
+		String statement = NAMESPACE+".doRetrieve";
+		SearchVO inVO = (SearchVO) dto;
+		LOG.debug("==============================");
+		LOG.debug("param:" + inVO.toString());
+		LOG.debug("statement:" +statement);
+		LOG.debug("==============================");	
+				
+		list = sqlSessionTemplate.selectList(statement, inVO);
+		
+		for(BoardVO vo: list) {
+			LOG.debug(vo);
+		}
+		
+		return list;
 	}
 
 	@Override
@@ -93,11 +108,6 @@ public class BoardDaoImpl implements BoardDao {
 		return flag;
 	}
 
-	@Override
-	public void deleteAll() throws SQLException {
-		// TODO Auto-generated method stub
-		
-	}
 
 	@Override
 	public BoardVO doSelectOne(BoardVO inVO) throws SQLException {

@@ -1,20 +1,13 @@
-package com.pcwk.ehr.board.dao;
+package com.pcwk.ehr.board.service;
 
 import java.sql.SQLException;
 import java.util.List;
 
-import com.pcwk.ehr.cmn.DTO;
 import com.pcwk.ehr.board.domain.BoardVO;
+import com.pcwk.ehr.cmn.DTO;
 
-public interface BoardDao {
-   
-	/**
-	 * 조회 건수 증가
-	 * @param inVO
-	 * @return 
-	 * @throws SQLException
-	 */
-	int updateReadCnt(BoardVO inVO) throws SQLException;
+public interface BoardService {
+
 	
 	
    /**
@@ -42,8 +35,6 @@ public interface BoardDao {
    int doUpdate(BoardVO inVO) throws SQLException;
 
    
-   int getCount(BoardVO inVO) throws SQLException;
-
    /**
     * 사용자 등록
     * 
@@ -66,5 +57,5 @@ public interface BoardDao {
     */
    BoardVO doSelectOne(BoardVO inVO) throws SQLException;
 
-
+	
 }

@@ -14,6 +14,8 @@ public class BoardVO extends DTO {
 	   private String modDt   ; // 수정일  
 	   private String modId   ; // 수정자  
 	   
+	   public BoardVO() {};
+	   
 	public BoardVO(int seq, String title, String contents, int readCnt, String div, String regDt, String regId,
 			String modDt, String modId) {
 		super();

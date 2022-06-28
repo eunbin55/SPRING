@@ -12,7 +12,7 @@
     <!-- 위 3개의 메타 태그는 *반드시* head 태그의 처음에 와야합니다; 어떤 다른 콘텐츠들은 반드시 이 태그들 *다음에* 와야 합니다 -->
     <link rel="shortcut icon" type="image/x-icon" href="${CP}/favicon.ico">
         
-    <title>부트 스트랩-boot_list</title>
+    <title>게시 목록</title>
      <!-- 부트스트랩 -->
     <link href="${CP_RES }/css/bootstrap.min.css" rel="stylesheet">
     <!-- jQuery (부트스트랩의 자바스크립트 플러그인을 위해 필요합니다) -->
@@ -30,12 +30,42 @@
       $(document).ready(function(){
     	console.log("document.ready");  
     	  
+        function doRetrieve(page){
+        	console.log("function doRetrieve");
+        	console.log("page: "+page);
+        
+            let url = "${CP}/user/doRetrieve.do";
+            let method = "GET";
+            let async = true;
+            let parameters = {
+                    searchDiv: $("#searchDiv").val(),
+                    searchWord: $("#searchWord").val(),
+                    pageSize: $("#pageSize").val(),
+                    pageNum: page,
+                    div: $("#div").val()
+            };
+            
+            EClass.callAjax(url, parameters, method, async, function(data){
+                console.log("EClass.callAjax.data"+ data);
+
+            });
+        
+        }
+
+    	$("#doRetrieve").on("click",function(e){
+	    	console.log("document.ready");  
+	    	doRetrieve(1);
+    		
+    	});
+    	
+    	//document.ready
       });
       
       
     </script>
 </head>
 <body>
+list:${list }
        <!-- div container -->
        <div class="container">
           <!-- 제목 -->
@@ -44,29 +74,30 @@
           </div>
           <!--// 제목 ----------------------------------------------------------->
           
+          vo:${vo }
           <!-- 검색영역 -->
           <div class="row">
             <form action="#" class="form-inline col-sm-12 col-md-12 col-lg-12 text-right">
+               <input type="text" name="div" id="div" value="${vo.getDiv()}">
                <div class="form-group">
                  <select class="form-control  input-sm">
                     <option value="">전체</option>
                     <option value="10">제목</option>
                     <option value="20">내용</option>
                  </select>
-                 <input type="text" class="form-control  input-sm"  placeholder="검색어" />
-                 <select class="form-control  input-sm">
+                 <input type="text" class="form-control  input-sm" name="searchWord" id="searchWord" placeholder="검색어" />
+                 <select class="form-control  input-sm" name="pageSize" id="pageSize">
                     <option value="10">10</option>
                     <option value="20">20</option>
                     <option value="30">30</option>
                  </select>  
-               <input type="button" class="btn btn-primary btn-sm" value="목록" />
-               <input type="button" class="btn btn-primary btn-sm" value="등록" />                              
+               <input type="button" id="doRetrieve" class="btn btn-primary btn-sm" value="목록" />
+               <input type="button" id="doRetrieve" class="btn btn-primary btn-sm" value="등록" />                              
                </div>
             </form>
           
           </div>
           <!--// 검색영역 ----------------------------------------------------------->
-          
           
           <!-- tabble -->
           <div class="table-responsive">
@@ -78,31 +109,30 @@
                      <th class="text-center col-sm-2 col-md-2 col-lg-1">작성자</th>
                      <th class="text-center col-sm-2 col-md-2 col-lg-1">작성일</th>
                      <th class="text-center col-sm-1 col-md-1 col-lg-1">조회수</th>
+                     <th style="display: none;">boardId</th>
                  </tr>
                </thead>
-               <tbody>
+                <tbody>
                 <!-- 문자: 왼쪽, 숫자: 오른쪽, 같은면: 가운데 -->
-                 <tr>
-                     <td class="text-center col-sm-1 col-md-1 col-lg-1">1</td>
-                     <td class="text-left   col-sm-6 col-md-6 col-lg-8">점심이후 디자인 작업중</td>
-                     <td class="text-center col-sm-2 col-md-2 col-lg-1">이상무</td>
-                     <td class="text-center col-sm-2 col-md-2 col-lg-1">2022-05-24</td>
-                     <td class="text-right  col-sm-1 col-md-1 col-lg-1">0</td>
-                 </tr>              
-                 <tr>
-                 <td class="text-center col-sm-1 col-md-1 col-lg-1">2</td>
-                 <td class="text-left   col-sm-6 col-md-6 col-lg-8">점심이후 디자인 작업중</td>
-                 <td class="text-center col-sm-2 col-md-2 col-lg-1">이상무</td>
-                 <td class="text-center col-sm-2 col-md-2 col-lg-1">2022-05-24</td>
-                 <td class="text-right  col-sm-1 col-md-1 col-lg-1">0</td>
-                 </tr>
-                 <tr>
-                     <td class="text-center col-sm-1 col-md-1 col-lg-1">3</td>
-                     <td class="text-left   col-sm-6 col-md-6 col-lg-8">점심이후 디자인 작업중</td>
-                     <td class="text-center col-sm-2 col-md-2 col-lg-1">이상무</td>
-                     <td class="text-center col-sm-2 col-md-2 col-lg-1">2022-05-24</td>
-                     <td class="text-right  col-sm-1 col-md-1 col-lg-1">0</td>
-                 </tr>                                                  
+                <c:choose>
+                    <c:when test="${list.size() > 0}">
+                        <c:forEach var="vo" items = "${list}">
+                             <tr>
+                                 <td class="text-center col-sm-1 col-md-1 col-lg-1">${vo.num}</td>
+                                 <td class="text-left   col-sm-6 col-md-6 col-lg-8">${vo.title}</td>
+                                 <td class="text-center col-sm-2 col-md-2 col-lg-1">${vo.modId}</td>
+                                 <td class="text-center col-sm-2 col-md-2 col-lg-1">${vo.modDt}</td>
+                                 <td class="text-right  col-sm-1 col-md-1 col-lg-1">${vo.readCnt}</td>
+                                 <th style="display:none;">${vo.seq}</th>
+                             </tr>                         
+                        </c:forEach>
+                    </c:when>  
+                    <c:otherwise>
+                        <tr>
+                            <td>No data found</td>
+                        </tr>
+                    </c:otherwise>            
+                 </c:choose>                                               
                </tbody>
            </table>
           </div>

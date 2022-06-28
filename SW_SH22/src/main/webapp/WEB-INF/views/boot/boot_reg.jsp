@@ -28,11 +28,17 @@
     <link rel="shortcut icon" type="image/x-icon" href="${CP}/favicon.ico">    
     <title>부트 스트랩-boot_list</title>
     <!-- 부트스트랩 -->
-    <link href="${CP_RES}/css/bootstrap.min.css" rel="stylesheet">
+    <link href="${CP_RES }/css/bootstrap.min.css" rel="stylesheet">
     <!-- jQuery (부트스트랩의 자바스크립트 플러그인을 위해 필요합니다) -->
-    <script src="${CP_RES}/js/jquery-1.12.4.js"></script>
+    <script src="${CP_RES }/js/jquery-1.12.4.js"></script>
     <!-- 모든 컴파일된 플러그인을 포함합니다 (아래), 원하지 않는다면 필요한 각각의 파일을 포함하세요 -->
-    <script src="${CP_RES}/js/bootstrap.min.js"></script>
+    <!-- 사용자 정의 function, isEmpty -->
+    <script src="${CP_RES }/js/eUtil.js"></script>
+    <!-- 사용자 정의 function, callAjax -->
+    <script src="${CP_RES }/js/eclass.js"></script>
+    <!-- jquery_bootstrap paging -->
+    <script type="text/javascript" src="${CP_RES}/js/jquery.bootpag.js"></script>    
+    <script src="${CP_RES }/js/bootstrap.min.js"></script>
         
     <script type="text/javascript">
       $(document).ready(function(){

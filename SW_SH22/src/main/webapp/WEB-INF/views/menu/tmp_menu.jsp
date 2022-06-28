@@ -79,6 +79,10 @@
                      <td class="text-center col-sm-2 col-md-2 col-lg-2">4</td>
                      <td class="text-left   col-sm-10 col-md-10 col-lg-10"><a href="${CP }/login/loginView.do">로그인</a></td>
                  </tr>                                                                    
+                 <tr>
+                     <td class="text-center col-sm-2 col-md-2 col-lg-2">5</td>
+                     <td class="text-left   col-sm-10 col-md-10 col-lg-10"><a href="${CP }/board/boardView.do">공지사항</a></td>
+                 </tr>                                                                    
                </tbody>
            </table>
           </div>

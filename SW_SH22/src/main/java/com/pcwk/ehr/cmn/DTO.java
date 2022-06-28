@@ -5,6 +5,7 @@ public class DTO {
 	private int num;
 	// 총글수
 	private int totalCnt;
+	
 
 	public DTO() {
 	}
@@ -29,6 +30,8 @@ public class DTO {
 	public String toString() {
 		return "DTO [num=" + num + ", totalCnt=" + totalCnt + "]";
 	}
+
+
 	
 	
 
