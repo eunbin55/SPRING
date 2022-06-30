@@ -28,10 +28,10 @@
     <script type="text/javascript">
     
     $(document).ready(function(){
-       console.log("document.ready");
-       
-       $("#doRetrieve").on("click", function(e){
-          console.log("doRetrieve");
+    	console.log("document.ready");
+    	
+    	$("#doRetrieve").on("click", function(e){
+    		console.log("doRetrieve");
             let url = "${CP}/naverBlog/doRetrieve.do";
             let method = "GET";
             let async = true;
@@ -41,16 +41,16 @@
             };
             
             EClass.callAjax(url, parameters, method, async, function(data) {
-               console.log("EClass.callAjax.data"+ data);
-               let parsedData = data;
-               let htmlData = ""; //동적으로 tbody아래 데이터 생성
-               
-               $("#blog_table > tbody").empty();//기존 데이터 삭제
-               
-               //조회 데이터가 있는 경우
-               if(null != parsedData && parsedData.length > 0){
+            	console.log("EClass.callAjax.data"+ data);
+            	let parsedData = data;
+            	let htmlData = ""; //동적으로 tbody아래 데이터 생성
+            	
+            	$("#blog_table > tbody").empty();//기존 데이터 삭제
+            	
+            	//조회 데이터가 있는 경우
+            	if(null != parsedData && parsedData.length > 0){
                     $.each(parsedData, function(i, item) {
-                       console.log("item"+ item);
+                    	console.log("item"+ item);
                         htmlData += " <tr>                                                                        ";
                         htmlData += " <td class='text-center col-sm-1 col-md-1 col-lg-1'>"+<c:out value='i'/>+"</td>     ";
                         htmlData += " <td class='text-left col-sm-7 col-md-7 col-lg-9'>  "+<c:out value='item.title'/>+"</td>   ";
@@ -58,16 +58,16 @@
                         htmlData += " <td class='text-center col-sm-2 col-md-2 col-lg-1'>"+<c:out value='item.postdate'/>+"</td>   ";
                         htmlData += " </tr>                                                                       ";
                       });
-               }else{
+            	}else{
                     htmlData += " <tr>                                                      ";
                     htmlData += "   <td colspan='99' class='text-center'>No data found</td> ";
                     htmlData += " </tr>                                                     ";
                 }
                 //조회 데이터가 없는 경우
                 $("#blog_table > tbody").append(htmlData);
-               
+            	
             });
-       })
+    	})
     });
     </script>
 <head>

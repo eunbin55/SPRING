@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/maven-v4_0_0.xsd">
-   <modelVersion>4.0.0</modelVersion>
-   <groupId>com.pcwk</groupId>
-   <artifactId>ehr</artifactId>
-   <name>SW_SH23</name>
-   <packaging>war</packaging>
-   <version>1.0.0-BUILD-SNAPSHOT</version>
-    <properties>
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.pcwk</groupId>
+    <artifactId>ehr</artifactId>
+    <name>SW_SH23</name>
+    <packaging>war</packaging>
+    <version>1.0.0-BUILD-SNAPSHOT</version>
+   <properties>
         <java-version>1.8</java-version>
         <spring-context.version>5.3.13</spring-context.version>
         <aopalliance.version>1.0</aopalliance.version>
@@ -21,11 +21,10 @@
         <commons-dbcp-version>1.4</commons-dbcp-version>
         <org.mybatis-version>3.5.7</org.mybatis-version>    
         <mybatis-spring-version>2.0.6</mybatis-spring-version>
-        <servlet-api-version>2.5</servlet-api-version>
+        <servlet-api-version>2.5</servlet-api-version> 
         <jsp-api-version>2.1</jsp-api-version>  
         <jstl-version>1.2</jstl-version>
         <org.bgee.log4jdbc-log4j2-version>1.16</org.bgee.log4jdbc-log4j2-version>
-        
         <org.mockito-version>1.10.19</org.mockito-version>
         <javax.servlet-api-version>3.1.0</javax.servlet-api-version>
         <gson-version>2.8.5</gson-version>
@@ -33,28 +32,27 @@
         <commons-io-version>2.11.0</commons-io-version>
     </properties>
     <dependencies>
-    
     <!-- https://mvnrepository.com/artifact/commons-fileupload/commons-fileupload -->
-    <dependency>
-       <groupId>commons-fileupload</groupId>
-       <artifactId>commons-fileupload</artifactId>
-       <version>${commons-fileupload-version}</version>
-    </dependency>
-    
+	<dependency>
+	    <groupId>commons-fileupload</groupId>
+	    <artifactId>commons-fileupload</artifactId>
+	    <version>${commons-fileupload-version}</version>
+	</dependency>
+	    
     <!-- https://mvnrepository.com/artifact/commons-io/commons-io -->
-    <dependency>
-       <groupId>commons-io</groupId>
-       <artifactId>commons-io</artifactId>
-       <version>${commons-io-version}</version>
-    </dependency>
-   
+	<dependency>
+	    <groupId>commons-io</groupId>
+	    <artifactId>commons-io</artifactId>
+	    <version>${commons-io-version}</version>
+	</dependency>
+    
     <!-- https://mvnrepository.com/artifact/com.google.code.gson/gson -->
     <dependency>
         <groupId>com.google.code.gson</groupId>
         <artifactId>gson</artifactId>
         <version>${gson-version}</version>
     </dependency>
-
+        
     
     <!-- https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api -->
     <dependency>
@@ -63,7 +61,7 @@
         <version>${javax.servlet-api-version}</version>
         <scope>provided</scope>
     </dependency>
-
+        
     
     <!-- https://mvnrepository.com/artifact/org.mockito/mockito-all -->
     <dependency>
@@ -72,17 +70,15 @@
         <version>${org.mockito-version}</version>
         <scope>test</scope>
     </dependency>
-
+        
     
-        <!-- mybatis log4jdbc-log4j2 라이브러리 -->
-        <!-- https://mvnrepository.com/artifact/org.bgee.log4jdbc-log4j2/log4jdbc-log4j2-jdbc4.1 -->
-        <dependency>
-            <groupId>org.bgee.log4jdbc-log4j2</groupId>
-            <artifactId>log4jdbc-log4j2-jdbc4.1</artifactId>
-            <version>${org.bgee.log4jdbc-log4j2-version}</version>
-        </dependency>
-
-
+    <!-- https://mvnrepository.com/artifact/org.bgee.log4jdbc-log4j2/log4jdbc-log4j2-jdbc4.1 -->
+    <dependency>
+        <groupId>org.bgee.log4jdbc-log4j2</groupId>
+        <artifactId>log4jdbc-log4j2-jdbc4.1</artifactId>
+        <version>${org.bgee.log4jdbc-log4j2-version}</version>
+    </dependency>
+        
     
     <!-- mybatis-spring -->
     <dependency>
@@ -162,7 +158,7 @@
             <groupId>org.springframework</groupId>
             <artifactId>spring-context</artifactId>
             <version>${spring-context.version}</version>
-        </dependency>       
+        </dependency>     
         <!-- https://mvnrepository.com/artifact/org.springframework/spring-jdbc -->
         <dependency>
             <groupId>org.springframework</groupId>
@@ -176,7 +172,7 @@
             <artifactId>spring-test</artifactId>
             <version>${spring-context.version}</version>
             <scope>test</scope>
-        </dependency>       
+        </dependency>     
         <!-- https://mvnrepository.com/artifact/org.springframework/spring-context-support -->
         <dependency>
             <groupId>org.springframework</groupId>
@@ -188,7 +184,7 @@
             <groupId>org.springframework</groupId>
             <artifactId>spring-webmvc</artifactId>
             <version>${spring-context.version}</version>
-        </dependency>               
+        </dependency>             
         
         <!-- Logging -->
         <dependency>
@@ -232,7 +228,6 @@
             </exclusions>
             <scope>runtime</scope>
         </dependency>
-
         <!-- @Inject -->
         <dependency>
             <groupId>javax.inject</groupId>

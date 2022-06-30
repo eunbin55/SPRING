@@ -14,13 +14,14 @@ import com.pcwk.ehr.naver.domain.Channel;
 import com.pcwk.ehr.naver.domain.Item;
 
 public class NaverBlogSearch {
-
-	final static Logger LOG = LogManager.getLogger(NaverBlogSearch.class);
 	
+	final static Logger LOG = LogManager.getLogger(NaverBlogSearch.class);
+
 	public static void main(String[] args) {
-		String clientId = "TAp5XZlz9_5slU5nO7KD";//
-		String clientSecret = "BpQ1mObhwn";
-		LOG.debug("=========================");
+		
+		String clientId = "qtzKbfAmebbuZA7YM4FC"; //회원 ID
+		String clienSecret = "lZWp_wbt7J";        //회원비번
+		LOG.debug("=================================");
 		
 		try {
 			String searchText = URLEncoder.encode("신촌", "UTF-8");
@@ -29,26 +30,26 @@ public class NaverBlogSearch {
 			
 			URL url = new URL(apiURL);
 			
-			HttpURLConnection con = (HttpURLConnection) url.openConnection();
+			HttpURLConnection con = (HttpURLConnection)url.openConnection();
 			con.setRequestMethod("GET");
 			con.setRequestProperty("X-Naver-Client-Id", clientId);
-			con.setRequestProperty("X-Naver-Client-Secret", clientSecret);
+			con.setRequestProperty("X-Naver-Client-Secret", clienSecret);
 			
 			int responseCode = con.getResponseCode();
-			LOG.debug("=responseCode="+responseCode);
+			LOG.debug("responseCode : "+responseCode);
 			
 			BufferedReader br;
 			
 			if(200 == responseCode) {
-				br=new BufferedReader(new InputStreamReader(con.getInputStream()));
+				br = new BufferedReader(new InputStreamReader(con.getInputStream()));
 			}else {
-				br=new BufferedReader(new InputStreamReader(con.getErrorStream()));
+				br = new BufferedReader(new InputStreamReader(con.getErrorStream()));
 			}
 			
 			String inputLine = "";
 			StringBuffer responseData = new StringBuffer(2000);
 			
-			while( (inputLine=br.readLine()) != null) {
+			while((inputLine = br.readLine()) != null) {
 				//LOG.debug(inputLine);
 				responseData.append(inputLine);
 			}
@@ -63,11 +64,12 @@ public class NaverBlogSearch {
 			}
 			
 		}catch(Exception e) {
-			LOG.debug("=========================");
-			LOG.debug("=e="+e.getMessage());
-			LOG.debug("=========================");
+			LOG.debug("=================================");
+			LOG.debug("e : "+ e.getMessage());
+			LOG.debug("=================================");
 			e.printStackTrace();
 		}
+
 	}
 
 }

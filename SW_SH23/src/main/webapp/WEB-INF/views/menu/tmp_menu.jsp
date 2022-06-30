@@ -85,7 +85,11 @@
                     <tr>
                     <td class="text-center col-sm-2 col-md-2 col-lg-2">6</td>
                     <td class="text-left col-sm-10 col-md-10 col-lg-10"><a href="${CP }/board/boardView.do?div=20">자유게시판</a></td>
-                    </tr>                                                                
+                    </tr>  
+                    <tr>
+                    <td class="text-center col-sm-2 col-md-2 col-lg-2">9</td>
+                    <td class="text-left col-sm-10 col-md-10 col-lg-10"><a href="${CP }/file/fileUpView.do">파일업로드</a></td>
+                    </tr>                                                               
                 </tbody>
             </table>
         </div>

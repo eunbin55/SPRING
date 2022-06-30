@@ -1,9 +1,42 @@
 package com.pcwk.ehr.cmn;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.UUID;
+
 public class StringUtil {
 
 		public final static String
 		CONTENT_UTF_8 = "text/html;charset=UTF-8";
+		
+		/**
+		 * File Rename
+		 * @param dateFormat
+		 * @return 46byte 데이터
+		 */
+		public static String getRenameFile(String dateFormat) {
+			return currentDate(dateFormat)+ getUUID();
+		}
+		
+		/**
+		 * 현재 날짜를 format에 따라 추출
+		 * @param dateFormat
+		 * @return 
+		 */
+		public static String currentDate(String dateFormat) {
+			SimpleDateFormat sdf = new SimpleDateFormat(dateFormat);
+			
+			return sdf.format(new Date());
+		}
+		
+		/**
+		 * uuid는 범용고유식별자(Universal Unique IDentifier)라고 한다
+		 * 32bit uuid
+		 * @return
+		 */
+		public static String getUUID() {
+			return UUID.randomUUID().toString().replaceAll("-", "");
+		}
 		
 		/**
 		 * <table>

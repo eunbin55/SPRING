@@ -3,13 +3,13 @@ package com.pcwk.ehr.naver.domain;
 import com.pcwk.ehr.cmn.DTO;
 
 public class Item extends DTO {
-
-	private String title        ;
-	private String link         ;
-	private String description  ;
-	private String bloggername  ;
-	private String bloggerlink  ;
-	private String postdate     ;
+	
+	private String title      ;
+	private String link       ;
+	private String description;
+	private String bloggername;
+	private String bloggerlink;
+	private String postdate   ;
 	
 	public Item() {}
 
@@ -68,5 +68,4 @@ public class Item extends DTO {
 				+ super.toString() + "]";
 	}
 
-	
 }

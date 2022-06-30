@@ -1,13 +1,14 @@
 package com.pcwk.ehr.cmn;
 
 public class FileVO extends DTO {
+	
 	//파일 아이디(DB)
-	//파일순번(DB)
-	private String orgFileNm; 	//원본 파일명
-	private String saveFileNm; 	//저장 파일명
-	private String savePat; 	//저장 경로
-	private long fileSize; 	//파일 사이즈
-	private String ext; 		//확장자
+	//파일 순번(DB)
+	private String orgFileNm;//원본파일명
+	private String saveFileNm;//저장파일명
+	private String savePath;//저장경로
+	private long fileSize;//파일 사이즈
+	private String ext;//확장자
 
 	public FileVO() {}
 
@@ -27,12 +28,12 @@ public class FileVO extends DTO {
 		this.saveFileNm = saveFileNm;
 	}
 
-	public String getSavePat() {
-		return savePat;
+	public String getSavePath() {
+		return savePath;
 	}
 
-	public void setSavePat(String savePat) {
-		this.savePat = savePat;
+	public void setSavePath(String savePath) {
+		this.savePath = savePath;
 	}
 
 	public long getFileSize() {
@@ -53,8 +54,8 @@ public class FileVO extends DTO {
 
 	@Override
 	public String toString() {
-		return "FileVO [orgFileNm=" + orgFileNm + ", saveFileNm=" + saveFileNm + ", savePat=" + savePat + ", fileSize="
-				+ fileSize + ", ext=" + ext + ", toString()=" + super.toString() + "]";
+		return "FileVO [orgFileNm=" + orgFileNm + ", saveFileNm=" + saveFileNm + ", savePath=" + savePath
+				+ ", fileSize=" + fileSize + ", ext=" + ext + ", toString()=" + super.toString() + "]";
 	}
 	
 	

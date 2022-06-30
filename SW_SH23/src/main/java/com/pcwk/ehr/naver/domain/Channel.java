@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Channel {
-
+	
 	private List<Item> items = new ArrayList<Item>();
 	
 	public Channel() {}
@@ -17,5 +17,5 @@ public class Channel {
 		this.items = items;
 	}
 	
-	
+
 }

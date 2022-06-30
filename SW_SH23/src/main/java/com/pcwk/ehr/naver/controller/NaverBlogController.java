@@ -31,31 +31,33 @@ public class NaverBlogController {
 	public String naverBlogView() throws SQLException{
 		
 		return "blog/blog_list";
+		
 	}
 	
-	
 	//http://localhost:8081/ehr/naverBlog/doRetrieve.do
-	@RequestMapping(value = "/doRetrieve.do", method=RequestMethod.GET
+	@RequestMapping(value="/doRetrieve.do", method=RequestMethod.GET
 			, produces="application/json;charset=UTF-8")
 	@ResponseBody
 	public String doRetrieve(SearchVO inVO) throws SQLException{
 		String jsonString = "";
+		
 		LOG.debug("=================================");
 		LOG.debug("doRetrieve");
 		LOG.debug("inVO : "+ inVO);
 		LOG.debug("=================================");
-		if( null == inVO.getSearchWord() && inVO.getSearchWord().equals("")) {
-			throw new NullPointerException("검색어를 입력하세요.");
+		
+		if(null == inVO.getSearchWord() && inVO.getSearchWord().equals("")) {
+			throw new NullPointerException("검색어를 입력하세요");
 		}
 		
 		List<Item> list = naverBlogService.doRetrieve(inVO);
 		Gson gson = new Gson();
 		jsonString = gson.toJson(list);
+		
 		LOG.debug("jsonString : "+ jsonString);
 		LOG.debug("=================================");
-
+		
 		return jsonString;
 	}
-	
-	
+
 }
